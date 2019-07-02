@@ -8,6 +8,9 @@ import { withLayoutAnimation } from '@cawfree/react-native-layout-animation-prov
 
 const styles = StyleSheet.create(
   {
+    container: {
+      overflow: 'hidden',
+    },
     forceLayoutHack: {
       height: Number.MIN_VALUE,
       backgroundColor: 'transparent',
@@ -84,6 +87,7 @@ class WindowedCollapsible extends React.Component {
     const shouldCollapse = collapsed || (!width || !height);
     return (
       <View
+        style={styles.container}
       >
         <View
           style={styles.forceLayoutHack}
