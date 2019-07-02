@@ -33,8 +33,7 @@ import {
   Text,
 } from 'react-native';
 
-import WindowedCollapsibleProvider from './WindowedCollapsibleProvider';
-import WindowedCollapsible from './WindowedCollapsible';
+import WindowedCollapsible, { WindowedCollapsibleProvider } from '@cawfree/react-native-windowed-collapsible';
 
 const { width } = Dimensions.get('window');
 
