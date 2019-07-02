@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@cawfree/react-native-layout-animation-provider@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@cawfree/react-native-layout-animation-provider/-/react-native-layout-animation-provider-1.0.3.tgz#fafe1fd8e24bfaf9744f596b75dd5ee5700eaddc"
-  integrity sha512-6rz2kn81pzVvwMwB42Ed+RNnfwoqGDkQBbCduEEtPmPFAYKWk/9s9Ft1tPg4wtcyBMTstWnQvYTfcFcC9fcrpQ==
+"@cawfree/react-native-layout-animation-provider@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@cawfree/react-native-layout-animation-provider/-/react-native-layout-animation-provider-1.0.4.tgz#957409469b13824e227b93e841f501fdd9911671"
+  integrity sha512-x4bIuroY7mtvbTxSSVI8zvar5OB93R70E5M2jbtDhcOtW0UhcXQ4LYu2paGPBF+9wOTr1dGAD9p/S6L4/a9dKw==

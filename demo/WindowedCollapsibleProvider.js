@@ -6,7 +6,7 @@ import LayoutAnimationProvider from '@cawfree/react-native-layout-animation-prov
 const styles = StyleSheet.create(
   {
     forceLayoutHack: {
-      height: 1,
+      height: Number.MIN_VALUE,
       backgroundColor: 'transparent',
     },
   },
@@ -17,10 +17,18 @@ const WindowedCollapsibleProvider = ({ duration, children, ...extraProps }) => (
     animationConfig={LayoutAnimation.create(duration, 'linear', 'scaleY')}
     {...extraProps}
   >
-    {children}
-    <View
-      style={styles.forceLayoutHack}
-    />
+    {children.map((child) => (
+      <View
+      >
+        <View
+          style={styles.forceLayoutHack}
+        />
+        {child}
+        <View
+          style={styles.forceLayoutHack}
+        />
+      </View>
+    ))}
   </LayoutAnimationProvider>
 );
 

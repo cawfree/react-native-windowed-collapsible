@@ -1,6 +1,6 @@
 {
   "name": "@cawfree/react-native-windowed-collapsible",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A <Collapsible/> component for React Native, with a difference.",
   "main": "index.js",
   "repository": "https://github.com/cawfree/react-native-windowed-collapsible",
@@ -8,6 +8,6 @@
   "license": "MIT",
   "private": false,
   "peerDependencies": {
-    "@cawfree/react-native-layout-animation-provider": "^1.0.3"
+    "@cawfree/react-native-layout-animation-provider": "^1.0.4"
   }
 }

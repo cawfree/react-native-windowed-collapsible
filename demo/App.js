@@ -47,6 +47,11 @@ const styles = StyleSheet.create(
       width,
       height: 200,
     },
+    discontinuity: {
+      width,
+      height: 400,
+      backgroundColor: 'red',
+    },
   },
 );
 
@@ -93,6 +98,14 @@ export default class App extends React.Component {
                 source={source}
               />
             </WindowedCollapsible>
+            <WindowedCollapsible
+              collapsed={!collapsed}
+            >
+              <View
+                style={styles.discontinuity}
+              />
+            </WindowedCollapsible>
+
             <WindowedCollapsible
               collapsed={collapsed}
             >
