@@ -2,13 +2,16 @@ import React from 'react';
 import {
   View,
   StyleSheet,
-  Alert,
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { withLayoutAnimation } from '@cawfree/react-native-layout-animation-provider';
 
 const styles = StyleSheet.create(
   {
+    forceLayoutHack: {
+      height: Number.MIN_VALUE,
+      backgroundColor: 'transparent',
+    },
   },
 );
 
@@ -80,30 +83,32 @@ class WindowedCollapsible extends React.Component {
     } = style;
     const shouldCollapse = collapsed || (!width || !height);
     return (
-      <React.Fragment
+      <View
       >
         <View
-          style={styles.container}
+          style={styles.forceLayoutHack}
+        />
+        <View
+          key="child"
+          style={style}
+          onLayout={this.__onLayout}
         >
-          <View
-            key="child"
-            style={style}
-            onLayout={this.__onLayout}
-          >
-            {children}
-          </View>
-          {
-            (!shouldCollapse) && (
-              <View
-                style={{
-                  width,
-                  height,
-                }}
-              />
-            )
-          }
+          {children}
         </View>
-      </React.Fragment>
+        {
+          (!shouldCollapse) && (
+            <View
+              style={{
+                width,
+                height,
+              }}
+            />
+          )
+        }
+        <View
+          style={styles.forceLayoutHack}
+        />
+      </View>
     );
   }
 }
