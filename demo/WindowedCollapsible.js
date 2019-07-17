@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Platform,
   View,
   StyleSheet,
 } from 'react-native';
@@ -85,6 +86,9 @@ class WindowedCollapsible extends React.Component {
       height,
     } = style;
     const shouldCollapse = collapsed || (!width || !height);
+    const platformProps = (Platform.OS === 'ios') ? {
+      pointerEvents: 'none',
+    } : {};
     return (
       <View
         style={styles.container}
@@ -102,6 +106,7 @@ class WindowedCollapsible extends React.Component {
         {
           (!shouldCollapse) && (
             <View
+              {...platformProps}
               style={{
                 width,
                 height,
