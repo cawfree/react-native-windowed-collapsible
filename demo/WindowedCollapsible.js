@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Platform,
   View,
@@ -74,6 +75,7 @@ class WindowedCollapsible extends React.Component {
   render() {
     const {
       children,
+      style: requestedStyle,
       ...extraProps
     } = this.props;
     const {
@@ -91,7 +93,10 @@ class WindowedCollapsible extends React.Component {
     } : {};
     return (
       <View
-        style={styles.container}
+        style={[
+          requestedStyle,
+          styles.container,
+        ]}
       >
         <View
           style={styles.forceLayoutHack}
@@ -121,6 +126,16 @@ class WindowedCollapsible extends React.Component {
     );
   }
 }
+
+WindowedCollapsible.propTypes = {
+  ...View.propTypes,
+  collapsed: PropTypes.bool,
+};
+
+WindowedCollapsible.defaultProps = {
+  ...View.defaultProps,
+  collapsed: false,
+};
 
 export default withLayoutAnimation(
   WindowedCollapsible,
