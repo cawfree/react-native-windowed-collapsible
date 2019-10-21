@@ -5,7 +5,6 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
-import PropTypes from 'prop-types';
 import { withLayoutAnimation } from '@cawfree/react-native-layout-animation-provider';
 
 const styles = StyleSheet.create(
