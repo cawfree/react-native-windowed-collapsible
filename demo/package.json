@@ -9,7 +9,7 @@
   "dependencies": {
     "@cawfree/react-native-layout-animation-provider": "^1.0.4",
     "react": "16.8.3",
-    "react-native": "0.59.9",
+    "react-native": "0.62.3",
     "react-timer-mixin": "^0.13.4"
   },
   "devDependencies": {
